@@ -19,10 +19,15 @@ chmod +x script.py
 
 ## Use `pylint` to find coding standards issues
 
+Generate the pylint config file
 ```bash
-# generate an pylint config file
 pylint --generate-rcfile > .pylintrc
-
-# find coding standards issues
+```
+And edit this line to disable full report messages
+```text
+reports=no
+```
+Now you can find coding standards leaks:
+```bash
 pylint my-script.py
 ```
