@@ -12,7 +12,17 @@ Create a `script.py` file:
 print 'Something!'
 ```
 
-And then make it executable:
+and then make it executable:
 ```bash
 chmod +x script.py
+```
+
+## Use `pylint` to find coding standards issues
+
+```bash
+# generate an pylint config file
+pylint --generate-rcfile > .pylintrc
+
+# find coding standards issues
+pylint my-script.py
 ```
